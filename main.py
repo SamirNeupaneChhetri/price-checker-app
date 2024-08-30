@@ -20,6 +20,19 @@ def showItem() -> None:
 
 def UserSelect_Items() -> list[str]:
     cart: list[str] = []
+    while True:
+        item = input("Enter a Items you Want To buy: ")
+        print(" 0 for checkout..........")
+        if item == '0':
+            print(f"Your Items: {cart}")
+            break
+        elif item in items:
+            cart.append(item)
+        else:
+            print("Item not found. Please select from available items.")
+        
+
+
 
 
     pass
@@ -57,8 +70,10 @@ def main() -> None:
             print()
         elif choice == 2:
             UserSelect_Items()
+            print()
         elif choice == 3:
             totalCost()
+            print()
         elif choice == 0:
             break
         else:
